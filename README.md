@@ -59,7 +59,7 @@ This project requires the MediaPipe Hand Landmarker model to function:
 Since the main script contains spaces in its name, execute it using quotation marks:
 
 ```bash
-python "puzzle game 1.py"
+python puzzle game 1.py
 
 ```
 
