@@ -1,3 +1,4 @@
+```markdown
 # 🧩 Gesture-Controlled Puzzle Game
 
 ![Gesture Puzzle Game Demo](working.png)
@@ -27,3 +28,41 @@ Follow these commands in your terminal or command prompt to setup and run the ga
 ```bash
 git clone [https://github.com/gourab354/gesture-puzzle-game.git](https://github.com/gourab354/gesture-puzzle-game.git)
 cd gesture-puzzle-game
+
+```
+
+### 2. Install Required Modules
+
+```bash
+pip install -r requirements.txt
+
+```
+
+### 3. Download the AI Model
+
+This game requires the MediaPipe Hand Landmarker task model file:
+
+1. Download the `hand_landmarker.task` file from the [Official MediaPipe Documentation](https://www.google.com/search?q=https://developers.google.com/mediapipe/solutions/vision/hand_landmarker/index%23models).
+2. Save the downloaded `hand_landmarker.task` file directly into the root folder of this project (the same folder containing `"puzzle game 1.py"`).
+
+### 4. Execute the Game Script
+
+Since the python file is named with spaces, make sure to include quotes when running it:
+
+```bash
+python "puzzle game 1.py"
+
+```
+
+---
+
+## 🎮 Game Controls
+
+* **Setup Phase (Viewfinder):** Pinch using **both hands** simultaneously to create the bounding box. Hold the pinch steady for 1 second to capture the image and generate the puzzle.
+* **Play Phase (Sliding Puzzle):** Pinch with **one hand** over any puzzle piece to pick it up. Drag it in the air to move it, and open your fingers (release the pinch) over another slot to swap or drop it.
+* **Reset Board:** Press the `R` key on your keyboard at any time to return to the setup screen.
+* **Exit Game:** Press the `ESC` key to close the game window.
+
+```
+
+```
