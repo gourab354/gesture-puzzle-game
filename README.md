@@ -1,28 +1,35 @@
-```markdown
 # 🧩 Gesture-Controlled Puzzle Game
 
-![Gesture Puzzle Game Demo](working.png)
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer_Vision-green.svg)
+![MediaPipe](https://img.shields.io/badge/MediaPipe-Hand_Tracking-orange.svg)
 
-Gesture-Controlled Puzzle Game is an interactive, touchless computer vision game that transforms your webcam into a virtual playground. Players can capture a picture and solve a sliding tile puzzle using entirely hand gestures—no mouse, keyboard, or touchscreen required.
+<p align="center">
+  <img src="working.png" alt="Gesture Puzzle Game Demo" width="800">
+</p>
 
-## ✨ Key Features
-
-* **Custom Puzzle Generation:** Using both hands, players make pinch gestures to draw a "viewfinder" box on the screen. Holding the pinch for 1 second captures whatever is inside the box and instantly scrambles it into a 3×3 puzzle grid.
-* **Touchless Interaction:** Players play the game by physically "grabbing" puzzle pieces in the air with a single-hand pinch gesture, dragging them around the screen, and releasing to drop or swap them.
-* **High-Performance Architecture:** The game utilizes a multi-threaded design. Heavy AI hand-tracking is offloaded to a background thread while the main game loop runs at a butter-smooth 30+ FPS.
-* **Dynamic UI & Visuals:** It features a stylish augmented reality (AR) style viewfinder, 3D-like drop shadows when tiles are lifted off the board, and a dedicated victory presentation screen when the puzzle is solved.
-
-## 🛠️ Technology Stack
-
-* **Python 3** (Core game logic)
-* **OpenCV** (Webcam feed processing, image manipulation, and UI rendering)
-* **MediaPipe** (Real-time AI hand landmark detection)
+> An interactive, touchless computer vision game that transforms your webcam into a virtual playground. Solve puzzles using entirely hand gestures—no mouse, keyboard, or touchscreen required.
 
 ---
 
-## 🚀 How to Run the Project
+## 🌟 Key Features
 
-Follow these commands in your terminal or command prompt to setup and run the game locally:
+* **Custom Puzzle Generation:** Draw a virtual "viewfinder" box in the air using a two-handed pinch gesture. Hold for 1 second to capture the frame and instantly generate a scrambled 3×3 puzzle.
+* **Touchless Interaction:** Physically "grab" puzzle pieces in the air. Use a single-hand pinch gesture to pick up, drag, and drop/swap tiles across the screen.
+* **High-Performance Architecture:** Built with a multi-threaded design. Heavy AI hand-tracking is offloaded to a background process, ensuring the main game loop runs at a butter-smooth 30+ FPS.
+* **Dynamic UI & AR Visuals:** Features a stylish augmented reality (AR) viewfinder, 3D-like drop shadows for active tiles, and a dedicated victory presentation screen upon completion.
+
+## 🛠️ Technology Stack
+
+* **Core Logic:** `Python 3`
+* **Computer Vision & UI:** `OpenCV`
+* **AI & Hand Tracking:** `Google MediaPipe`
+
+---
+
+## 🚀 Quick Start Guide
+
+Follow these steps to set up and run the game on your local machine:
 
 ### 1. Clone the Repository
 ```bash
@@ -31,7 +38,9 @@ cd gesture-puzzle-game
 
 ```
 
-### 2. Install Required Modules
+### 2. Install Dependencies
+
+Ensure you have Python installed, then install the required libraries:
 
 ```bash
 pip install -r requirements.txt
@@ -40,14 +49,14 @@ pip install -r requirements.txt
 
 ### 3. Download the AI Model
 
-This game requires the MediaPipe Hand Landmarker task model file:
+This project requires the MediaPipe Hand Landmarker model to function:
 
 1. Download the `hand_landmarker.task` file from the [Official MediaPipe Documentation](https://www.google.com/search?q=https://developers.google.com/mediapipe/solutions/vision/hand_landmarker/index%23models).
-2. Save the downloaded `hand_landmarker.task` file directly into the root folder of this project (the same folder containing `"puzzle game 1.py"`).
+2. Move the downloaded `hand_landmarker.task` file directly into the root directory of this project (the same folder where `"puzzle game 1.py"` is located).
 
-### 4. Execute the Game Script
+### 4. Launch the Game
 
-Since the python file is named with spaces, make sure to include quotes when running it:
+Since the main script contains spaces in its name, execute it using quotation marks:
 
 ```bash
 python "puzzle game 1.py"
@@ -58,10 +67,16 @@ python "puzzle game 1.py"
 
 ## 🎮 Game Controls
 
-* **Setup Phase (Viewfinder):** Pinch using **both hands** simultaneously to create the bounding box. Hold the pinch steady for 1 second to capture the image and generate the puzzle.
-* **Play Phase (Sliding Puzzle):** Pinch with **one hand** over any puzzle piece to pick it up. Drag it in the air to move it, and open your fingers (release the pinch) over another slot to swap or drop it.
-* **Reset Board:** Press the `R` key on your keyboard at any time to return to the setup screen.
-* **Exit Game:** Press the `ESC` key to close the game window.
+| Action | Gesture / Key | Description |
+| --- | --- | --- |
+| **Capture Image** | `Two-Handed Pinch` | Pinch with both hands to draw a bounding box. Hold steady for 1 second. |
+| **Move Tile** | `Single-Hand Pinch` | Pinch over a tile to pick it up, drag to a new slot, and release to drop/swap. |
+| **Reset Game** | `R` (Keyboard) | Instantly resets the board and returns to the camera setup phase. |
+| **Quit Game** | `ESC` (Keyboard) | Safely closes the application window. |
+
+---
+
+*Developed by [gourab354*](https://www.google.com/search?q=https://github.com/gourab354)
 
 ```
 
